@@ -8,23 +8,24 @@
 		<link href="https://ada.is/computer-modern/Serif/cmun-serif.css" rel="stylesheet">
 	</head>
 	<body>
-		<header style="display: flex; flex-direction: column; align-content: center;">
+		<section style="display: flex;flex-direction: column;align-content: center;align-self: stretch;justify-content: center;">
 			<h1 id="title">A Rube Goldberg Machine</h1>
 			<h2 id="subtitle">An introduction to post-modern Web Development</h2>
-			<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
-		</header>
+		</section>
 
+		<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
 
 		<section>
 			<div class="columns">
-				<p>This blog post was inspired by the wonderful talks from <a href="#link-to-videos">CSS-Day Amsterdam 2017</a>. The ones which
-				especially struck me the ones which were effectively powerful frameworks built into the browser.</p>
+				<p>This blog post was inspired by the wonderful talks from <a href="#link-to-videos">CSS-Day Amsterdam 2017</a>. Many of these talks introduced newer browser APIs to give framework levels of functionality but built into the browser.</p>
+				<p>The title of this article refers to a Rube Goldberg machine, a machine which uses many interlocking moving parts to perform a function, these new APIs although very different can all work together to produce a wonderful web experience.</p>
 				<p>These new APIs are designed to be used as-is rather than requiring a CSS/JavaScript library to assist them.</p>
 				<p>This offers great benefits for performance. As there is no overhead on external dependencies, they also have great support considering how new they are.</p>
 				<p>These new APIs not only are they powerful individually they complement eachothe beautifully, CSS variables being the common thread which goes through them all.</p>
 			</div>
 
-			<h2>Topics</h2>
+			<h2>Topics covered:</h2>
+
 			<ul>
 				<li>CSS Grid</li>
 				<li>Web Animations</li>
@@ -32,9 +33,10 @@
 			</ul>
 		</section>
 		
+		
 		<section>
-			<h2>CSS Grid</h2>
 
+			<h2>CSS Grid</h2>
 			<section class="columns">
 				<p>This feels like the most significant API addition since FlexBox and enables beautiful layouts.</p>
 				<p>With CSS Grid you are not restricted to 12 fixed width columns like many popular libaries.</p>
@@ -55,12 +57,16 @@
 				<h2>Four Column Grid</h2>
 				<p>The title is the first element, I have set it's writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
 				<img width="256" src="images/logo1.png" style="grid-column-start: 2;"/>
-				<p>The previous image has <code>grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. This paragraph gets placed immediately after because there are two horizontal cells avaialble for it to fill.</p>
+				<p>The previous image has <code>grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. The image width &amp; height are set to 100% so that it matches the height of this <code>&lt;p&gt;</code>.<br />  This paragraph gets placed immediately after the image because there are still two horizontal cells avaialble for it to fill in this row.</p>
 
 				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code>grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
 			</div>
 			<figcaption>CSS Grid Example with Text and Images</figcaption>
 		</figure>
+
+		<section class="columns">
+			CSS Grid is great for very stylised layouts.
+		</section>
 
 		<section>
 			<h2>Links</h2>
