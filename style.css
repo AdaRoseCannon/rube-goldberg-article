@@ -1,0 +1,147 @@
+:root {
+	--padding: 1rem;
+	--core-columns: 2;
+	--unit-h: 11.1vw;
+	--unit-v: 11.1vh;
+	--pages: 1;
+}
+
+body {
+	font-family: 'Computer Modern Serif', times;
+	font-size: 16px;
+	background-color: lightgoldenrodyellow;
+	margin: 0;
+	counter-reset: figure;
+	margin-bottom: 3em;
+}
+
+.columns {
+	column-count: var(--core-columns);
+	column-gap: var(--padding);
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr [main-start] minmax(560px, 5fr) [main-end] 2fr;
+	grid-auto-rows: minmax(3em, min-content);
+}
+
+section, header, main {
+	background: white;
+}
+
+body > * {
+	grid-column: main;
+}
+
+@media (min-width:1000px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr [left-start] minmax(400px, 7fr) [right-start] minmax(3em, 1fr) [left-end] minmax(400px, 7fr) [right-end] 1fr;
+		grid-auto-rows: minmax(3em, min-content);
+		align-items: flex-start;
+		grid-gap: 1em;
+	}
+
+	body > section:nth-child(odd),
+	body > header:nth-child(odd) {
+		grid-column: left;
+		background: white;
+	}
+
+	body > section:nth-child(even),
+	body > header:nth-child(even) {
+		grid-column: right;
+		background: white;
+	}
+
+	body > * {
+		grid-column: auto;
+		margin: 0;
+	}
+}
+
+figure {
+	padding: 1em;
+	counter-increment: figure;
+}
+
+figure > figcaption {
+	text-align: center;
+	font-style: oblique;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	padding: 0.5em 0;
+}
+
+figure > figcaption:before {
+	content: 'Figure ' counter(figure) ': ';
+}
+
+body > * {
+	padding: 0.5em;
+}
+
+/* The tiny grid with no content */
+
+#grid-example, #grid-example > * {
+	border: 2px solid black;
+	border-radius: 0.5em;
+}
+
+#grid-example {
+	display: grid;
+	width: 50%;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0.25em;
+	padding: 0.5em;
+    break-inside: avoid-column;  
+	page-break-inside: avoid; /*-- FF --*/ 
+}
+
+#grid-example > * {
+	display: block;
+	padding: 0.5em;
+}
+
+/* The grid figure */
+
+#grid-placement-demo {
+	display: grid;
+	grid-template-columns: minmax(2rem, min-content) repeat(3, 1fr);
+	grid-auto-rows: minmax(3em, min-content);
+	margin: 1em 0;
+	align-items: flex-start;
+	grid-gap: 0.5em;
+	font-family: helvetica, sans-serif;
+	font-size: 80%;
+}
+
+#grid-placement-demo > p {
+	grid-column-end: span 2;
+	margin: 0;
+	color: #333;
+}
+
+#grid-placement-demo > :hover {
+	outline: 2px solid lightblue;
+}
+
+#grid-placement-demo h2 {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	text-align: right;
+	white-space: nowrap;
+	padding-top: 1em;
+	grid-row-end: span 2;
+}
+
+#grid-placement-demo > * {
+	max-width: 100%;
+	margin: 0;
+}
+
+#grid-placement-demo > img {
+	width: 100%;
+}

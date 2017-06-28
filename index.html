@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Modern Web Development</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/style.css" rel="stylesheet">
+		<link href="https://ada.is/computer-modern/Serif/cmun-serif.css" rel="stylesheet">
+	</head>
+	<body>
+		<header style="display: flex; flex-direction: column; align-content: center;">
+			<h1 id="title">A Rube Goldberg Machine</h1>
+			<h2 id="subtitle">An introduction to post-modern Web Development</h2>
+			<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
+		</header>
+
+		<section>
+			<div class="columns">
+				<p>This blog post was inspired by the wonderful talks from <a href="#link-to-videos">CSS-Day Amsterdam 2017</a>. The ones which
+				especially struck me the ones which were effectively powerful frameworks built into the browser.</p>
+				<p>These new APIs are designed to be used as-is rather than requiring a CSS/JavaScript library to assist them.</p>
+				<p>This offers great benefits for performance. As there is no overhead on external dependencies, they also have great support considering how new they are.</p>
+				<p>These new APIs not only are they powerful individually they complement eachothe beautifully, CSS variables being the common thread which goes through them all.</p>
+			</div>
+
+			<h2>Topics</h2>
+			<ul>
+				<li>CSS Grid</li>
+				<li>Web Animations</li>
+				<li>CSS Variables</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>CSS Grid</h2>
+
+			<section class="columns">
+				<p>This feels like the most significant API addition since FlexBox and enables beautiful layouts.</p>
+				<p>With CSS Grid you are not restricted to 12 fixed width columns like many popular libaries.</p>
+				<div id="grid-example">
+					<span style="grid-column-end: span 2;"><code>grid-column-end: span 2;</code></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<p>CSS Grid enables one to define, how the grid columns and rows behave with granularity. The contents are the automatically placed into the grid to fill the available space. See the example below.</p>
+			</section>
+
+		</section>
+
+		<figure class="embed">
+			<div id="grid-placement-demo">
+				<h2>Four Column Grid</h2>
+				<p>The title is the first element, I have set it's writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
+				<img width="256" src="images/logo1.png" style="grid-column-start: 2;"/>
+				<p>The previous image has <code>grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. This paragraph gets placed immediately after because there are two horizontal cells avaialble for it to fill.</p>
+
+				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code>grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
+			</div>
+			<figcaption>CSS Grid Example with Text and Images</figcaption>
+		</figure>
+
+		<section>
+			<h2>Links</h2>
+			<ul>
+				<li>https://rachelandrew.co.uk/archives/2016/04/12/flexible-sized-grids-with-auto-fill-and-minmax/</li>
+				<li>https://codepen.io/cssgrid/pen/kkoZro?js-preprocessor=babel/</li>
+				<li>https://css-tricks.com/snippets/css/complete-guide-grid/</li>
+			</ul>
+		</section>
+
+		<script src="main.js"></script>
+	</body>	
+</html>
