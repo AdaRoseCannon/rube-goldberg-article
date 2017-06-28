@@ -37,10 +37,11 @@ body > * {
 @media (min-width:1000px) {
 	body {
 		display: grid;
-		grid-template-columns: 1fr [left-start] minmax(400px, 7fr) [right-start] minmax(3em, 1fr) [left-end] minmax(400px, 7fr) [right-end] 1fr;
+		grid-template-columns: [left-start] minmax(400px, 7fr) [right-start] minmax(3em, 1fr) [left-end] minmax(400px, 7fr) [right-end];
 		grid-auto-rows: minmax(3em, min-content);
 		align-items: flex-start;
 		grid-gap: 1em;
+		margin: 0 2em;
 	}
 
 	body > section:nth-child(odd),
