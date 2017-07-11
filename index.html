@@ -7,13 +7,15 @@
 		<link href="/style.css" rel="stylesheet">
 		<link href="https://ada.is/computer-modern/Serif/cmun-serif.css" rel="stylesheet">
 	</head>
-	<body>
+	<body><main id="grid-container">
 		<section style="display: flex;flex-direction: column;align-content: center;align-self: stretch;justify-content: center;">
 			<h1 id="title">A Rube Goldberg Machine</h1>
 			<h2 id="subtitle">An introduction to post-modern Web Development</h2>
 		</section>
 
-		<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
+		<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;align-self: flex-end;" />
+
+		<h2 style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center; font-size: 2.5em; color: rgba(70,50,0,0.3);	margin-left: 0; margin-right: 0; padding-right: 0; padding-left: 0;">Whitespace &lt;3</h2>
 
 		<section>
 			<div class="columns">
@@ -65,7 +67,8 @@
 		</figure>
 
 		<section class="columns">
-			CSS Grid is great for very stylised layouts.
+			<p>CSS Grid is great for very stylised layouts. It is very useful for controlled use of whitespace, Empty areas on your page to improve legibility.</p>
+			
 		</section>
 
 		<section>
@@ -78,5 +81,5 @@
 		</section>
 
 		<script src="main.js"></script>
-	</body>	
+	</main></body>	
 </html>

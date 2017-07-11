@@ -9,7 +9,7 @@
 body {
 	font-family: 'Computer Modern Serif', times;
 	font-size: 16px;
-	background-color: lightgoldenrodyellow;
+	background-color: floralwhite;
 	margin: 0;
 	counter-reset: figure;
 	margin-bottom: 3em;
@@ -20,17 +20,17 @@ body {
 	column-gap: var(--padding);
 }
 
-body {
+#grid-container {
 	display: grid;
-	grid-template-columns: 1fr [main-start] minmax(560px, 5fr) [main-end] 2fr;
+	grid-template-columns: [main-start] minmax(560px, 5fr) [main-end];
 	grid-auto-rows: minmax(3em, min-content);
 }
 
-section, header, main {
+section, header {
 	background: white;
 }
 
-body > * {
+#grid-container > * {
 	grid-column: main;
 }
 
@@ -38,24 +38,32 @@ body > * {
 	font-size: 4em;
 }
 
+
+@media (min-width:550px) {
+	#grid-container {
+		margin: 0 auto;
+		width: calc(100vw - 4 * var(--padding));
+		max-width: 1000px;
+	}
+}
+
 @media (min-width:1000px) {
-	body {
+	#grid-container {
 		display: grid;
 		grid-template-columns: [left-start] minmax(400px, 7fr) [right-start] minmax(3em, 1fr) [left-end] minmax(400px, 7fr) [right-end];
 		grid-auto-rows: min-content;
 		align-items: flex-start;
 		grid-gap: 1em;
-		margin: 0 2em;
 	}
 
-	body > section:nth-of-type(odd),
-	body > header:nth-of-type(odd) {
+	#grid-container > section:nth-of-type(odd),
+	#grid-container > header:nth-of-type(odd) {
 		grid-column: left;
 		background: white;
 	}
 
-	body > section:nth-of-type(even),
-	body > header:nth-of-type(even) {
+	#grid-container > section:nth-of-type(even),
+	#grid-container > header:nth-of-type(even) {
 		grid-column: right;
 		background: white;
 	}
@@ -64,7 +72,7 @@ body > * {
 		grid-column: left-start / right-end;
 	}
 
-	body > * {
+	#grid-container > * {
 		grid-column: auto;
 		margin: 0;
 	}
@@ -87,7 +95,7 @@ figure > figcaption:before {
 	content: 'Figure ' counter(figure) ': ';
 }
 
-body > * {
+#grid-container > * {
 	padding: 0.5em;
 }
 
@@ -156,4 +164,5 @@ body > * {
 	height: 100%;
 	object-fit: contain;
 	object-position: top right;
+	filter: sepia() opacity(0.5);
 }
