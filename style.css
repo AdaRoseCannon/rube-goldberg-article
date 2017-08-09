@@ -80,13 +80,26 @@ p > code {
 	#grid-container > section:nth-of-type(even) {
 		grid-column: right;
 	}
+
+	#grid-container > section:nth-of-type(even) + h2:nth-of-type(odd),
+	#grid-container > section:nth-of-type(even) + :not(section) + h2:nth-of-type(odd) {
+		grid-column: left-start/-1;
+	}
 	
-	#grid-container > section:nth-of-type(odd) + h2 {
+	#grid-container > section:nth-of-type(odd) + h2:nth-of-type(odd),
+	#grid-container > section:nth-of-type(odd) + :not(section) + h2:nth-of-type(odd) {
 		grid-column: right-start/-1;
 	}
 
-	#grid-container > section:nth-of-type(even) + h2 {
+	#grid-container > section:nth-of-type(even) + h2:nth-of-type(even),
+	#grid-container > section:nth-of-type(even) + :not(section) + h2:nth-of-type(even) {
 		grid-column: 1/left-end;
+		text-align: right;
+	}
+	
+	#grid-container > section:nth-of-type(odd) + h2:nth-of-type(even),
+	#grid-container > section:nth-of-type(odd) + :not(section) + h2:nth-of-type(even) {
+		grid-column: 1/right-end;
 		text-align: right;
 	}
 
