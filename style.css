@@ -1,9 +1,10 @@
 :root {
 	--padding: 1rem;
 	--core-columns: 2;
-	--unit-h: 11.1vw;
-	--unit-v: 11.1vh;
-	--pages: 1;
+	--header-padding-left: var(--padding);
+	--header-padding-right: var(--padding);
+	--breakpoint: 1000px;
+	--page-margin: calc(50vw - var(--breakpoint) / 2);
 }
 
 body {
@@ -13,6 +14,9 @@ body {
 	margin: 0;
 	counter-reset: figure;
 	margin-bottom: 3em;
+	overflow-x: hidden;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 
 .columns {
@@ -20,10 +24,8 @@ body {
 	column-gap: var(--padding);
 }
 
-#grid-container {
-	display: grid;
-	grid-template-columns: [main-start] minmax(560px, 5fr) [main-end];
-	grid-auto-rows: minmax(3em, min-content);
+.columns > p:first-child {
+	margin-top: 0;
 }
 
 section, header {
@@ -38,34 +40,66 @@ section, header {
 	font-size: 4em;
 }
 
+p > code {
+	color: navy;
+	background: palegoldenrod;
+
+}
 
 @media (min-width:550px) {
 	#grid-container {
 		margin: 0 auto;
 		width: calc(100vw - 4 * var(--padding));
-		max-width: 1000px;
+		max-width: var(--breakpoint);
 	}
 }
 
 @media (min-width:1000px) {
 	#grid-container {
 		display: grid;
-		grid-template-columns: [left-start] minmax(400px, 7fr) [right-start] minmax(3em, 1fr) [left-end] minmax(400px, 7fr) [right-end];
+		grid-auto-rows: minmax(3em, min-content);
+		grid-template-columns: var(--page-margin) [left-start] repeat(2, minmax(200px, 2.5fr)) [right-start] minmax(3em, 1fr) [left-end] repeat(2, minmax(200px, 2.5fr)) [right-end] var(--page-margin);
 		grid-auto-rows: min-content;
 		align-items: flex-start;
 		grid-gap: 1em;
+		align-items: flex-end;
+		align-content: flex-end;
+		max-width: 100vw;
+		width: 100%;
 	}
 
-	#grid-container > section:nth-of-type(odd),
-	#grid-container > header:nth-of-type(odd) {
+	#grid-container > section {
+		max-width: 100%;
+		background: white;
+	}
+
+	#grid-container > section:nth-of-type(odd) {
 		grid-column: left;
-		background: white;
 	}
 
-	#grid-container > section:nth-of-type(even),
-	#grid-container > header:nth-of-type(even) {
+	#grid-container > section:nth-of-type(even) {
 		grid-column: right;
-		background: white;
+	}
+	
+	#grid-container > section:nth-of-type(odd) + h2 {
+		grid-column: right-start/-1;
+	}
+
+	#grid-container > section:nth-of-type(even) + h2 {
+		grid-column: 1/left-end;
+		text-align: right;
+	}
+
+	#grid-container > section:nth-of-type(odd).header {
+		border-radius: 0 0 1em 0;
+		grid-column: 1/left-end;
+		padding-left: var(--page-margin);
+	}
+
+	#grid-container > section:nth-of-type(even).header {
+		border-radius: 0 0 0 1em;
+		grid-column: right-start/-1;
+		padding-right: var(--page-margin);
 	}
 
 	.wide {
@@ -73,30 +107,39 @@ section, header {
 	}
 
 	#grid-container > * {
-		grid-column: auto;
+		grid-column: auto / span 2;
 		margin: 0;
 	}
 }
 
 figure {
-	padding: 1em;
 	counter-increment: figure;
 }
 
-figure > figcaption {
+pre {
+	overflow: auto;
+}
+
+figure > figcaption, label {
 	text-align: center;
 	font-style: oblique;
 	border-top: 1px solid grey;
 	border-bottom: 1px solid grey;
 	padding: 0.5em 0;
+	margin-top: 1em;
+	display: block;
+}
+
+label > input {
+	background-color: palegoldenrod;	
 }
 
 figure > figcaption:before {
 	content: 'Figure ' counter(figure) ': ';
 }
 
-#grid-container > * {
-	padding: 0.5em;
+#grid-container > header, #grid-container > section {
+	padding: var(--padding);
 }
 
 /* The tiny grid with no content */
@@ -126,7 +169,7 @@ figure > figcaption:before {
 
 #grid-placement-demo {
 	display: grid;
-	grid-template-columns: minmax(2rem, min-content) repeat(3, 1fr);
+	grid-template-columns: min-content repeat(3, 1fr);
 	grid-auto-rows: minmax(3em, min-content);
 	margin: 1em 0;
 	align-items: flex-start;
@@ -145,13 +188,14 @@ figure > figcaption:before {
 	outline: 2px solid lightblue;
 }
 
-#grid-placement-demo h2 {
+#grid-placement-demo > h2 {
 	writing-mode: vertical-rl;
 	transform: rotate(180deg);
 	text-align: right;
 	white-space: nowrap;
 	padding-top: 1em;
 	grid-row-end: span 2;
+	width: 1.5em;
 }
 
 #grid-placement-demo > * {
@@ -161,8 +205,36 @@ figure > figcaption:before {
 
 #grid-placement-demo > img {
 	width: 100%;
-	height: 100%;
 	object-fit: contain;
-	object-position: top right;
-	filter: sepia() opacity(0.5);
+	filter: sepia(1) opacity(0.5);
+}
+
+#auto-flow-dense-demo {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+#auto-flow-dense-demo > div {
+	flex-grow: 1;
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	height: 100%;
+}
+
+#auto-flow-dense-demo > div > span {
+	border: inherit;
+	font-size: 2em;
+	color: white;
+}
+
+#auto-flow-dense-demo > div > span.tall {
+	grid-row: auto/span 2;
+}
+
+#auto-flow-dense-demo > div > span.wide {
+	grid-column: auto/span 2;
 }
