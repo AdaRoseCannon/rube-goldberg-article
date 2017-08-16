@@ -44,9 +44,9 @@
 			<div class="columns">
 				<p>This blog post was inspired by the wonderful talks from <a href="#link-to-videos">CSS-Day Amsterdam 2017</a>. Many of these talks introduced newer browser APIs to give framework levels of functionality but built into the browser.</p>
 				<p>The title of this article refers to a Rube Goldberg machine, a machine which uses many interlocking moving parts to perform a function, these new APIs although very different can all work together to produce a wonderful web experience.</p>
-				<p>These new APIs are designed to be used as-is rather than requiring a CSS/JavaScript library to assist them.</p>
+				<p>These new APIs are designed to be used as-is rather than requiring a CSS/JavaScript library to assist them. Their high-level power allows them to be thought of as frameworks built into the web platform for assisting with problems often found in front end web development.</p>
 				<p>This offers great benefits for performance. As there is no overhead on external dependencies, they also have great support considering how new they are.</p>
-				<p>These new APIs are powerful individually but also they complement each other beautifully, CSS variables being the common thread which goes through them all.</p>
+				<p>These new APIs are powerful individually but also they complement each other beautifully, CSS custom properties being the common thread which goes through them all as it is a low level change to CSS.</p>
 				<p>Together they enable us to produce beautiful Websites written with symantic HTML where all the visual and animation design is in the CSS and the interactivity is added with JavaScript.</p>
 			</div>
 
@@ -187,7 +187,7 @@ child {
 		
 		<h2>CSS Custom Properties</h2>
 
-		<figure style="grid-column-start: left-start;">
+		<figure style="grid-column: left-start/ right-start;">
 			<pre><code>
 :root {
 	--my-var: red;
@@ -214,13 +214,39 @@ p {
 				document.write('Can\'t detect CSS Custom Properties Support');
 			}
 			</script></p>
-			<div class="columns">
-				<p>On the surface CSS Custom Properties just seem akin to static sass variables but they are so much more than that!</p>
-				<p>The power of CSS custom properties comes from the cascade (the first C in CSS). CSS Custom Properties are inherited by their descendents. They can be overrided by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>.</p>
-				<p>This allows you to override them dynamically depending on the situation.</p>
-				<p>They can be combined with calc for some clever behaviours or combinations of variables.</p>
-			</div>
+			
+			<p>On the surface CSS Custom Properties just seem akin to static sass variables but they are so much more than that!</p>
+			<blockquote cite="https://twitter.com/salvadelapuente/status/895728964714598400">
+				<p>Custom properties make your CSS to behave like a spreadsheet. You alter a value, everything is recomputed.</p>
+				<footer>
+				— <cite><a href="https://twitter.com/salvadelapuente/status/895728964714598400">@Salva</a></cite>
+				</footer>
+			</blockquote>
 		</section>
+		
+		<section>
+			<p>CSS Custom Properties can have their value determined by other Custom Properties or combinations therof using <code>calc()</code></p>
+			<p>CSS Custom properties can be overrided at any point to change the value further down in the cascade. This allows components to use/ignore/modify the inherited custom properties as required.</p>
+			<p>They can be overrided by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>. Allowing more concise CSS with less duplication as by changing one or two variable you can affect many properties.</p>
+			<p>A really nice effect of having the variables calculated dynamically is that because the size of dynamic units such as <code>1rem 2em 3vw 4ex 5cm</code> it is possible to add or subtract dimensions with different units, e.g. <code>calc(10px + 1em + 3cm)</code></p>
+		</section>
+		
+		<figure style="grid-column: left-end/right-end;">
+			<pre><code>
+:root {
+	--a: 1em;
+	--b: 10px;
+	--sum-a-b: calc(var(--a) + var(--b));
+}
+
+div {
+	height: var(--sum-a-b);
+}
+			</code></pre>
+			<figcaption>
+				Using calc() with custom properties.
+			</figcaption>
+		</figure>
 
 		<section>
 			<h3>Integrating with JavaScript</h3>
@@ -229,22 +255,58 @@ p {
 			</div>
 		</section>
 
-		<figure>
+		<figure style="grid-column: left-start/right-end; max-width: 100%;">
 			<pre><code>
+&lt;style&gt;
+	:root {
+		--my-prop: 3em;
+	}
 
+	#my-title {
+		--my-prop: 2em;
+	}
+&lt;/style&gt;
+
+&lt;script&gt;
+	getComputedStyle(document.documentElement).getPropertyValue('--my-prop')
+	// "3em"
+
+	getComputedStyle(document.getElementById('my-title')).getPropertyValue('--my-prop')
+	// "2em"
+
+	document.documentElement.style.setProperty('--my-prop', '4em')
+&lt;/script&gt;
 			</code></pre>
 			<figcaption>
-				Reading and writing CSS custom Properties
+				Reading and Writing CSS custom Properties
 			</figcaption>
 		</figure>
+		
+		<section>
+			<p>If you update a CSS custom property, like with any CSS property, the whole document will update and all other custom properties will be updated.</p>
+			<p>Try running the following code snippet in your browsers console on this page:</p>
+			<pre><code>
+document.documentElement.style.setProperty('--blue', 'magenta')
+			</code></pre>
+		</section>
 
 		<h2>Web Animation API</h2>
 		<section>
-			<p>Web Animations are cool</p>
+			<p>Until recently on the web the two ways of doing animations were using CSS transitions and animations or one of the many great libraries on the Web for doing animation already such as tween.js, anime.js and Greensock.</p>
+			<p>CSS animations and transitions are good for one off animations triggered by a class change. It makes sense to have the styles written declaratively but in CSS it is limited with how much they integrate with JavaSript.</p>
+			<p>The API for Web Animations to me feels like a JavaScript version of the CSS Animations spec. </p>
+		</section>
+
+		<section>
+			<p>Web Animations are all kept in time using the document's timeline. This ensures that a 200ms animation will always take 200ms regardless of framerate or skipped frames due to lagging.</p>
+		</section>
+
+		<section>
 			<ul>
-				<li></li>
-				<li></li>
+				<li>Timeline</li>
 				<li>Integrating with CSS, CSS Variables.</li>
+				<li>Animating CSS variables</li>
+				<li>Reduced animation media query</li>
 			</ul>
 		</section>
 

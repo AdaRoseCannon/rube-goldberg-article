@@ -1,0 +1,405 @@
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/main.js 317]: reference to undefined property global.stage
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/layout.js 217]: reference to undefined property global.window_group
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/layout.js 899]: reference to undefined property this.monitors[this.findIndexForActor(...)]
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/osdMonitorLabeler.js 59]: reference to undefined property Meta.MonitorManager
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/panel.js 1107]: reference to undefined property indicator.menu._openChangedId
+current session already has an ibus-daemon.
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/slider.js 34]: reference to undefined property St.GenericAccessible
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/messageList.js 392]: reference to undefined property this._useBodyMarkup
+Gjs-Message: JS WARNING: [resource:///org/gnome/gjs/modules/tweener/tweener.js 538]: reference to undefined property properties[istr].arrayIndex
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/search.js 436]: reference to undefined property provider.isRemoteProvider
+Gjs-Message: JS WARNING: [/home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com/extension.js 150]: reference to undefined property Meta.KeyBindingFlags.REVERSES
+User Themes-Message: loading default theme (Adwaita)
+Dash to Dock-Message: WARNING: addSignalMethods is replacing existing [0x55ed75d63c40 Gjs_ShowAppsIcon.dash-item-container] connect method
+Dash to Dock-Message: WARNING: addSignalMethods is replacing existing [0x55ed75d63c40 Gjs_ShowAppsIcon.dash-item-container] disconnect method
+Dash to Dock-Message: WARNING: addSignalMethods is replacing existing [0x55ed75d63c40 Gjs_ShowAppsIcon.dash-item-container] emit method
+GNOME Shell-Message: Extension native-window-placement@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/native-window-placement@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/native-window-placement@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension window-list@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension alternate-tab@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/alternate-tab@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/alternate-tab@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension drive-menu@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/drive-menu@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/drive-menu@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension windowsNavigator@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/windowsNavigator@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/windowsNavigator@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension launch-new-instance@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/launch-new-instance@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/launch-new-instance@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension user-theme@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension workspace-indicator@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/workspace-indicator@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/workspace-indicator@gnome-shell-extensions.gcampax.github.com will not be loaded
+GNOME Shell-Message: Extension auto-move-windows@gnome-shell-extensions.gcampax.github.com already installed in /home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com. /usr/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com will not be loaded
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/messageList.js 169]: reference to undefined property this._container
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/panel.js 342]: reference to undefined property this.menu.actionGroup
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/misc/ibusManager.js 196]: reference to undefined property this._engines[id]
+GNOME Shell-Message: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/status/network.js 1897]: reference to undefined property this._mainConnectionStateChangedId
+Gjs-Message: JS WARNING: [/home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/dash.js 781]: reference to undefined property oldApps[oldIndex]
+Gjs-Message: JS WARNING: [/home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/gravatar@jr.rlabs.io/lib/md5.js 182]: reference to undefined property output[(i >> 5)]
+Gjs-Message: JS WARNING: [/home/SERILOCAL/ada.edwards/.local/share/gnome-shell/extensions/gravatar@jr.rlabs.io/lib/md5.js 85]: reference to undefined property x[(i + 3)]
+Gravatar-Message: [gravatar@jr.rlabs.io] Downloading gravatar icon from http://www.gravatar.com/avatar/540d78b76ce4ea7704f3715e3605f496?s=192&d=mm
+Gravatar-Message: [gravatar@jr.rlabs.io] Download successful
+Gravatar-Message: [gravatar@jr.rlabs.io] Setting icon for "ada.edwards" to "/tmp/1502451276091_540d78b76ce4ea7704f3715e3605f496"
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/workspace.js 1233]: reference to undefined property this._reservedSlotWindow
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/dash.js 760]: reference to undefined property oldApps[oldIndex]
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/appDisplay.js 1298]: reference to undefined property this.name
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/windowManager.js 1617]: reference to undefined property actor._windowType
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/notificationDaemon.js 189]: reference to undefined property ndata.hints['desktop-entry']
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/notificationDaemon.js 394]: reference to undefined property hints.resident
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/search.js 259]: reference to undefined property this.provider.canLaunchSearch
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/shellDBus.js 146]: reference to undefined property params.monitor
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/keyboard.js 573]: reference to undefined property actor.extended_key
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2a00001 (Slack - Sa)
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/popupMenu.js 502]: reference to undefined property child._delegate
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/popupMenu.js 24]: reference to undefined property child._delegate
+Window manager warning: Invalid WM_TRANSIENT_FOR window 0x2800007 specified for 0x2800f26 (Connection).
+Window manager warning: Invalid WM_TRANSIENT_FOR window 0x2800007 specified for 0x2800f26 (Connection).
+GNOME Shell-Message: Received error from DBus search provider org.gnome.Photos.desktop during GetResultMetas: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name :1.1000 was not provided by any .service files
+GNOME Shell-Message: Wrong number of result metas returned by search provider org.gnome.Photos.desktop: expected 3 but got 0
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/ui/dnd.js 392]: reference to undefined property this._touchSequence
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+GNOME Shell-Message: Received error from DBus search provider org.gnome.Photos.desktop during GetResultMetas: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.gnome.Shell.SearchProvider2' on object at path /org/gnome/Photos/SearchProvider
+GNOME Shell-Message: Wrong number of result metas returned by search provider org.gnome.Photos.desktop: expected 3 but got 0
+GNOME Shell-Message: Received error from DBus search provider org.gnome.Photos.desktop during GetResultMetas: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name :1.1055 was not provided by any .service files
+GNOME Shell-Message: Wrong number of result metas returned by search provider org.gnome.Photos.desktop: expected 3 but got 0
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x4200007 (untitled-s)
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x4200007 (untitled-s)
+GNOME Shell-Message: Invalid result meta returned from search provider org.gnome.Software.desktop
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x5000001 (index.html)
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2a00001 (Slack - Sa)
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2a00001 (Slack - Sa)
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2a00001 (Slack - Sa)
+Gjs-Message: JS WARNING: [resource:///org/gnome/shell/gdm/util.js 331]: reference to undefined property this._preemptingService
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_editable: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: verification-failed: TypeError: this._entry.text is null
+AuthPrompt<.updateSensitivity@resource:///org/gnome/shell/gdm/authPrompt.js:419:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+AuthPrompt<._onVerificationFailed@resource:///org/gnome/shell/gdm/authPrompt.js:258:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<._verificationFailed@resource:///org/gnome/shell/gdm/util.js:558:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reportInitError@resource:///org/gnome/shell/gdm/util.js:343:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:360:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_editable: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: verification-failed: TypeError: this._entry.text is null
+AuthPrompt<.updateSensitivity@resource:///org/gnome/shell/gdm/authPrompt.js:419:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+AuthPrompt<._onVerificationFailed@resource:///org/gnome/shell/gdm/authPrompt.js:258:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<._verificationFailed@resource:///org/gnome/shell/gdm/util.js:558:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reportInitError@resource:///org/gnome/shell/gdm/util.js:343:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:360:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: no-more-messages: TypeError: this._settings is null
+ShellUserVerifier<._updateDefaultService@resource:///org/gnome/shell/gdm/util.js:412:1
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._onReset@resource:///org/gnome/shell/gdm/util.js:508:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._cancelAndReset@resource:///org/gnome/shell/gdm/util.js:519:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._verificationFailed/signalId<@resource:///org/gnome/shell/gdm/util.js:553:49
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<.finishMessageQueue@resource:///org/gnome/shell/gdm/util.js:249:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout@resource:///org/gnome/shell/gdm/util.js:254:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout/this._messageQueueTimeoutId<@resource:///org/gnome/shell/gdm/util.js:269:60
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: no-more-messages: TypeError: this._settings is null
+ShellUserVerifier<._updateDefaultService@resource:///org/gnome/shell/gdm/util.js:412:1
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._onReset@resource:///org/gnome/shell/gdm/util.js:508:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._cancelAndReset@resource:///org/gnome/shell/gdm/util.js:519:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._verificationFailed/signalId<@resource:///org/gnome/shell/gdm/util.js:553:49
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<.finishMessageQueue@resource:///org/gnome/shell/gdm/util.js:249:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout@resource:///org/gnome/shell/gdm/util.js:254:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout/this._messageQueueTimeoutId<@resource:///org/gnome/shell/gdm/util.js:269:60
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_editable: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_set_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Clutter-CRITICAL **: clutter_text_get_text: assertion 'CLUTTER_IS_TEXT (self)' failed
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: verification-failed: TypeError: this._entry.text is null
+AuthPrompt<.updateSensitivity@resource:///org/gnome/shell/gdm/authPrompt.js:419:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+AuthPrompt<._onVerificationFailed@resource:///org/gnome/shell/gdm/authPrompt.js:258:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<._verificationFailed@resource:///org/gnome/shell/gdm/util.js:558:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reportInitError@resource:///org/gnome/shell/gdm/util.js:343:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:360:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Exception in callback for signal: no-more-messages: TypeError: this._settings is null
+ShellUserVerifier<._updateDefaultService@resource:///org/gnome/shell/gdm/util.js:412:1
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._onReset@resource:///org/gnome/shell/gdm/util.js:508:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._cancelAndReset@resource:///org/gnome/shell/gdm/util.js:519:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._verificationFailed/signalId<@resource:///org/gnome/shell/gdm/util.js:553:49
+_emit@resource:///org/gnome/gjs/modules/signals.js:126:27
+ShellUserVerifier<.finishMessageQueue@resource:///org/gnome/shell/gdm/util.js:249:9
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout@resource:///org/gnome/shell/gdm/util.js:254:13
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+ShellUserVerifier<._queueMessageTimeout/this._messageQueueTimeoutId<@resource:///org/gnome/shell/gdm/util.js:269:60
+
+
+(gnome-shell:17026): Gjs-WARNING **: JS ERROR: Failed to open reauthentication channel: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: No session available
+ShellUserVerifier<._reauthenticationChannelOpened@resource:///org/gnome/shell/gdm/util.js:349:34
+wrapper@resource:///org/gnome/gjs/modules/lang.js:178:22
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
