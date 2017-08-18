@@ -5,7 +5,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="./style.css" rel="stylesheet">
+		<link href="./easings.css" rel="stylesheet">
 		<link href="https://ada.is/computer-modern/Serif/cmun-serif.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 
 		<style>
 
@@ -77,7 +81,7 @@
 				<p>Grid layout feels like the most significant CSS API addition since FlexBox and enables beautiful layouts.</p>
 				<p>With CSS Grid you are not restricted to 12 fixed width columns like many popular grid libaries.</p>
 				<div id="grid-example">
-					<span style="grid-column-end: span 2;"><code>grid-column-end: span 2;</code></span>
+					<span style="grid-column-end: span 2;"><code class="css">grid-column-end: span 2;</code></span>
 					<span></span>
 					<span></span>
 					<span></span>
@@ -95,9 +99,9 @@
 				<h2>Four Column Grid</h2>
 				<p>The title is the first element, I have set it's writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
 				<img width="256" src="images/logo1.png" style="grid-column-start: 2;"/>
-				<p>The previous image has <code>grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. The image width is set to 100% so that it fills the column width.  This paragraph gets placed immediately after the image because there are still two horizontal cells avaialble for it to fill in this row.</p>
+				<p>The previous image has <code class="css">grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. The image width is set to 100% so that it fills the column width.  This paragraph gets placed immediately after the image because there are still two horizontal cells avaialble for it to fill in this row.</p>
 
-				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code>grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
+				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code class="css">grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
 			</div>
 			<figcaption>CSS Grid Example with Text and Images</figcaption>
 		</figure>
@@ -157,7 +161,7 @@
 		<section>
 			<h3>CSS Grid and Responsive Design</h3>
 			<div class="columns">
-				<p>CSS Grid works really well with RWD. A simple grid can have different columns and rows depending on media queries. It's children will then be moved to fit into the Grid however they can. If the grid is set to <code>grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
+				<p>CSS Grid works really well with RWD. A simple grid can have different columns and rows depending on media queries. It's children will then be moved to fit into the Grid however they can. If the grid is set to <code class="css">grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
 				<p>We can gain more control when we use named grid areas and named grid edges. We can have content which always fills the same grid-area or goes between the same two named edges but change what that means depending on the context.</p>
 				<p>Our grid could have 7 columns on large screens, 5 on medium sized screens and only 2 on mobile. Then we can rely on a combination of auto placement and named areas to layout our content precisely on all screen sizes.</p>
 			</div>
@@ -167,7 +171,7 @@
 			<h3>Named Grid Edges</h3>
 			<p>Here I have defined a two column grid using <code>grid-template-columns</code>, where the first edge and the last edge have been named using square brackets.</p>
 			<p>The child's 3 <code>grid-column</code> statements are all equivalent. Making it go from one edge to the other.</p>
-			<pre><code>
+			<pre><code class="css">
 parent {
 	display: grid;
 	grid-template-columns: [wide-start] 1fr 1fr [wide-end];
@@ -188,7 +192,7 @@ child {
 		<h2>CSS Custom Properties</h2>
 
 		<figure style="grid-column: left-start/ right-start;">
-			<pre><code>
+			<pre><code class="css">
 :root {
 	--my-var: red;
 }
@@ -256,7 +260,7 @@ div {
 		</section>
 
 		<figure style="grid-column: left-start/right-end; max-width: 100%;">
-			<pre><code>
+			<pre><code class="html">
 &lt;style&gt;
 	:root {
 		--my-prop: 3em;
@@ -285,29 +289,247 @@ div {
 		<section>
 			<p>If you update a CSS custom property, like with any CSS property, the whole document will update and all other custom properties will be updated.</p>
 			<p>Try running the following code snippet in your browsers console on this page:</p>
-			<pre><code>
+			<pre><code class="js">
 document.documentElement.style.setProperty('--blue', 'magenta')
 			</code></pre>
+			<p>This element, document.documentElement, corresponds to the ':root' element in CSS.</p>
+			<p>You can also run this command at any point in the tree, try using the your browser's inspector to set the style of one of the headings <code>el.setAttribute('style', "--blue: firebrick;")</code> the heading should change but leave the others are left untouched.</p>
 		</section>
 
 		<h2>Web Animation API</h2>
 		<section>
-			<p>Until recently on the web the two ways of doing animations were using CSS transitions and animations or one of the many great libraries on the Web for doing animation already such as tween.js, anime.js and Greensock.</p>
+			<p><script>
+			if (typeof Animation === 'undefined') {
+				document.write('Your browser does not natively support Web Animations, but we will use the polyfill library, so the demos will still work. <script src="https://cdn.rawgit.com/web-animations/web-animations-js/b0ca1f7f/web-animations.min.js"></scr'+'ipt>');
+			}else {
+				document.write('Your browser supports Web Animations');
+			}
+			if (typeof Animation !== 'undefined' && Animation.prototype.finished === undefined) {
+				Object.defineProperty(Animation.prototype, 'finished', {get: function () {
+					return new Promise(function (resolve) {
+						this.addEventListener('finish', resolve);
+					}.bind(this));
+				}});
+			}
+			</script></p>
+			<p>Unlike CSS custom properties and CSS Grid which cannot be polyfilled performantly, there is a polyfil for the JavaScript Web Animation API. It can be downloaded from <a href="https://github.com/web-animations/web-animations-js">Web Animations on Github</a> so there is no excuse not to use it today.</p>
+			<p>Animations are far more complex than I can go into in a short summary article so I <b>strongly</b> recommend watching <a href="https://vimeo.com/channels/cssday/226736126">Rachel Nabors amazing talk on Web Animations from the recent CSS Day</a>.</p>
+		</section>
+		
+		<figure style="grid-column: left-start/right-end; max-width: 100%; display: none;">
+			<pre><code class="html">
+
+&lt;script src="https://cdn.rawgit.com/web-animations/web-animations-js/b0ca1f7f/web-animations.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+	// Polyfill for Animation.prototype.finished which isn't in all native implementations yet.
+	if (typeof Animation !== 'undefined' && Animation.prototype.finished === undefined) {
+		Object.defineProperty(Animation.prototype, 'finished', {get: function () {
+			return new Promise(function (resolve) {
+				this.addEventListener('finish', resolve);
+			}.bind(this));
+		}});
+	}
+&lt;/script&gt;
+			</code></pre>
+			<figcaption>Polyfills for Web Animation and the Web Animation "finished" property.</figcaption>
+		</figure>
+
+
+		<section>
+			<p><b>Until recently</b> on the web the two ways of doing animations were using CSS transitions and animations or one of the many great libraries on the Web for doing animation already such as tween.js, anime.js and Greensock.</p>
 			<p>CSS animations and transitions are good for one off animations triggered by a class change. It makes sense to have the styles written declaratively but in CSS it is limited with how much they integrate with JavaSript.</p>
-			<p>The API for Web Animations to me feels like a JavaScript version of the CSS Animations spec. </p>
+			<p>The API for Web Animations to me feels like a JavaScript version of the CSS Animations spec.</p>
+			<p>They have a really nice property which is currently hard to achieve on the web, Web Animations are all kept in time using the document's timeline. This ensures that a 200ms animation will always take 200ms regardless of framerate or skipped frames due to lagging.</p>
+		</section>
+
+		<script id="animDemo">
+var animKeyframes = [{
+    opacity: 0,
+    transform: 'translateX(5em)'
+},{
+	opacity: 1,
+	offset: 0.2	
+},{
+    opacity: 1,
+    transform: 'translateX(0) rotate(720deg) scale(2)'
+}];
+
+var animOptions = {
+	direction: 'normal', // or reverse or alternate
+	duration: 1000, // miliseconds
+	easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
+	fill: 'forwards'
+};
+		</script>
+
+		<script>
+			function playForwards () {
+				console.log(ballEl);
+				ballEl.animate(animKeyframes, animOptions);
+			}
+
+			function playBackwards () {
+				ballEl.animate(animKeyframes, {
+					direction: 'reverse', // or reverse or alternate
+					duration: 1000, // miliseconds
+					easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
+					fill: 'forwards'
+				});
+			}
+		</script>
+
+		<figure style="grid-column: left-end/right-end;">
+			<pre><code class="js">
+				<script>document.write(animDemo.text);</script>
+
+ballEl.animate(animKeyframes, animOptions);
+			</code></pre>
+			<div id="ballEl" style="width: 2em; height: 2em; border-radius: 100%; background-color: var(--magenta);"></div>
+			<div>
+				<button onclick="playForwards()">Play Forwards</button>
+				<button onclick="playBackwards()">Play Backwards</button>
+			</div>
+			<figcaption>Defining the keyFrames and playing an animation.</figcaption>
+		</figure>
+
+		<section>
+			<p>We have defined animation keyframes in Figure 6. the <code>offset</code> property in the second keyframe tells us this keyframe is at 0.7 through the animation.</p>
+			<p>It is also possible to set easing on a per-key-frame basis too. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">The docs on mdn</a> go into good detail.</p>
+			<p>The point I want to make here is that integrates amazingly with custom css properties!</p>
 		</section>
 
 		<section>
-			<p>Web Animations are all kept in time using the document's timeline. This ensures that a 200ms animation will always take 200ms regardless of framerate or skipped frames due to lagging.</p>
+			<p>You can use custom properties in your keyframe declaration, see figure 7.!!!</p>
+			<p>In this example, I animate the background-color through the custom property --blue to a yellow color to the custom property --magenta.</p>
 		</section>
 
+		<figure style="grid-column: left-end/right-end;">
+
+			<pre><code class="js">
+ballEl.animate({
+	backgroundColor: [
+		'var(--blue)',
+		'#ffff33',
+		'var(--magenta)'
+	]
+}, animOptions);
+			</code></pre>
+			<div id="ballEl2" style="width: 2em; height: 2em; border-radius: 100%; background-color: var(--magenta);"></div>
+			<div>
+				<button onclick="ballEl2.animate({
+					backgroundColor: ['var(--blue)', '#ffff33' , 'var(--magenta)']
+				}, animOptions)">Play Forwards</button>
+			</div>
+			<figcaption>Defining the keyFrames and playing an animation.</figcaption>
+		</figure>
+
 		<section>
-			<ul>
-				<li>Timeline</li>
-				<li>Integrating with CSS, CSS Variables.</li>
-				<li>Animating CSS variables</li>
-				<li>Reduced animation media query</li>
-			</ul>
+			<p>Because the syntax for easings is the same as that for CSS, I like to keep all my easing functions in a CSS file such as <a href="easings.css" target="_blank">easings.css</a> then read them in when defining the animation.</p>
+			<p>In Figure 8. below, I use the approximation of ease in out quart from my CSS file of easings. Where I can also use in the CSS for transitions or animations.</p>
+			<p>CSS custom properties are really great for reducing duplicate declarations of styles in your JS, they can all be kept in your CSS file.</p>
+		</section>
+
+		<figure style="grid-column: left-start/right-end;">
+			<pre><code class="js">
+el.animate(myKeyframes, {
+	duration: 500,
+	easing: getComputedStyle(document.documentElement).getPropertyValue('--easeInOutQuart'),
+	fill: 'forwards'
+});
+			</code></pre>
+			<figcaption>Using the easings from a css file.</figcaption>
+		</figure>
+
+		<section>
+			<p>CSS variables can also help with accessibility.</p>
+			<p>To continue take it a step further you can keep a duration multiplier, --durationK, in your CSS.</p>
+			<p>In JavaScript and CSS animations and transitions, multiply your durations by this value.</p>
+			<p>By default set the value of --durationK 1 so it has no effect on the durations.</p>
+			<p>When it is set to 0, any animation which has it's duration multiplied by --durationK will happen instantly.</p>
+			<p>This will help people who prefer reduced motion.</p>
+		</section>
+
+		<figure style="grid-column: left-end/right-end;">
+			<pre><code class="css">
+:root {
+	--durationK: 1;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	:root {
+		--durationK: 0;
+	}
+}
+			</code></pre>
+			<figcaption>Using a single variable to control the speed of all animations.</figcaption>
+		</figure>
+
+		<figure style="grid-column: left-start/right-start;">
+			<div id="ballEl3" style="width: 2em; height: 2em; border-radius: 100%; background-color: var(--magenta); --bounceHeight: 1;margin: auto;"></div>
+			<script id="bounceSourceScript">
+var bounceKeyframes = {
+	transform: [
+		'translateY(0)',
+		'translateY(calc(-10em * var(--bounceHeight)))'
+	]
+};
+
+var bounceOptions = {
+	duration: 500 * Number(getComputedStyle(ballEl3).getPropertyValue('--bounceHeight')),
+	fill: 'forwards',
+	direction: 'alternate',
+	iterations: 2,
+	easing: getComputedStyle(ballEl3).getPropertyValue('--easeOutQuad')
+}
+
+var bouncing = false;
+function bounce() {
+	if (bouncing) return;
+	bouncing = true;
+	var bounceHeight = Number(getComputedStyle(ballEl3).getPropertyValue('--bounceHeight'));
+	ballEl3.style.setProperty('--bounceHeight', bounceHeight * 0.7);
+	var anim = ballEl3.animate(bounceKeyframes, bounceOptions);
+	anim.finished.then(function () {
+		bouncing = false;
+		if (bounceHeight > 0.1) {
+			bounce();
+		} else {
+			// Reset to go again
+			ballEl3.style.setProperty('--bounceHeight', 1);
+		}
+	});
+}
+			</script>
+			<div>
+				<button onclick="bounce()">Bounce</button>
+			</div>
+			<figcaption>An animation is chained together.</figcaption>
+		</figure>
+
+		<section>
+			<h4>Chaining Animations</h4>
+			<p>The advantage of the Web Animations API over CSS animations is that it gives callbacks for when it is finished.</p>
+			<p>You can use <code>anim.addEventListener('finish')</code> to detect when it has finished. It also has a <code>.finished</code> property, which is a promise which resolves when it is complete. The promise interface is really nice but hasn't been implemented everywhere yet. <a href="https://gist.github.com/AdaRoseEdwards/1f1c86cc8d390e5760fc029793b8db22">I wrote a short polyfill for it.</a></p>
+			<p>In the example in Figure 10. once the animation has finished, it decreases the --bounceHeight css variable and plays the animation again.</p>
+			<button onclick="bounceSource.style.display = 'block'">View the source code</button>
+		</section>
+
+		<figure id="bounceSource" style="display: none; grid-column: left-start / right-end;">
+			<pre><code class="js">
+// In the HTML
+&lt;div id="ballEl3" style="--bounceHeight: 1;"&gt;&lt;/div&gt;
+
+// In the JS
+<script>document.write(bounceSourceScript.text)</script>
+			</code></pre>
+			<figcaption>Source code for the bounce demo.</figcaption>
+		</figure>
+
+		<h2>Conclusion</h2>
+
+		<section>
+			<p>I hope this has illustrated some of the new powers of the web which enable us to start letting go of our frameworks. To use some of the powerful tools being built into the platform to make our lives as developers easier.</p>
 		</section>
 
 		<h2>Links</h2>

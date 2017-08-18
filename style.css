@@ -127,10 +127,12 @@ p > code {
 
 figure {
 	counter-increment: figure;
+	max-width: 100%;
 }
 
 pre {
 	overflow: auto;
+	max-width: 100%;
 }
 
 blockquote {
