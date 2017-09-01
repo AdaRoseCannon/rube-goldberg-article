@@ -46,9 +46,9 @@
 
 		<section>
 			<div class="columns">
-				<p>This blog post was inspired by the wonderful talks from <a href="#link-to-videos">CSS-Day Amsterdam 2017</a>. Many of these talks introduced newer browser APIs to give framework levels of functionality but built into the browser.</p>
+				<p>This blog post was inspired by the wonderful talks from <a href="https://vimeo.com/channels/cssday">CSS-Day Amsterdam 2017</a>. Especially those of Rachel Nabors, Rachel Andrew and Jen Simmons. Many of these talks introduced newer browser APIs to give framework levels of functionality built into the browser.</p>
 				<p>The title of this article refers to a Rube Goldberg machine, a machine which uses many interlocking moving parts to perform a function, these new APIs although very different can all work together to produce a wonderful web experience.</p>
-				<p>These new APIs are designed to be used as-is rather than requiring a CSS/JavaScript library to assist them. Their high-level power allows them to be thought of as frameworks built into the web platform for assisting with problems often found in front end web development.</p>
+				<p>These new APIs are designed to be used as-is rather than requiring a CSS or JavaScript library to assist them. Their high-level power allows them to be thought of as frameworks built into the web platform for assisting with problems often found in front end web development.</p>
 				<p>This offers great benefits for performance. As there is no overhead on external dependencies, they also have great support considering how new they are.</p>
 				<p>These new APIs are powerful individually but also they complement each other beautifully, CSS custom properties being the common thread which goes through them all as it is a low level change to CSS.</p>
 				<p>Together they enable us to produce beautiful Websites written with symantic HTML where all the visual and animation design is in the CSS and the interactivity is added with JavaScript.</p>
@@ -57,13 +57,13 @@
 			<h2>Topics covered:</h2>
 
 			<ul>
-				<li>CSS Grid</li>
-				<li>Web Animations</li>
-				<li>CSS Custom Properties, also known as CSS Variables</li>
+				<li><a href="#css-grid">CSS Grid</a></li>
+				<li><a href="#css-custom-properties">CSS Custom Properties, also known as CSS Variables</a></li>
+				<li><a href="#web-animations">Web Animations</a></li>
 			</ul>
 		</section>
 		
-		<h2>CSS Grid</h2>
+		<h2 id="css-grid">CSS Grid</h2>
 		
 		<section>
 			<p><script>
@@ -78,8 +78,13 @@
 			}
 			</script></p>
 			<section class="columns">
-				<p>Grid layout feels like the most significant CSS API addition since FlexBox and enables beautiful layouts.</p>
+				<p>Grid layout feels like the most significant CSS API addition since FlexBox. Like flexbox enabled powerful 1-dimensional layouts; Grid enables beautiful 2-dimensional layouts.</p>
+				<p>Grid isn't a flexbox replacement, where a layout is 1 dimensional e.g. a single row/column such as in a component flexbox maybe more useful.</p>
+				<p>A good rule of thumb is Grid for page layouts and Flexbox for components. But feel free to use whichever tool feels best for your situation.</p>
+
+				<p>CSS grid allows you to divide your page up into a template with columns and rows and label areas of your grid.</p>
 				<p>With CSS Grid you are not restricted to 12 fixed width columns like many popular grid libaries.</p>
+				<p>The grid of CSS Grid can have any number of rows and columns of unequal sizes. It can also automatically add rows or columns to allow it to grow horizontally or vertically as more content is added.</p>
 				<div id="grid-example">
 					<span style="grid-column-end: span 2;"><code class="css">grid-column-end: span 2;</code></span>
 					<span></span>
@@ -87,8 +92,8 @@
 					<span></span>
 					<span></span>
 				</div>
-				<p>CSS Grid enables one to define, how the grid columns and rows behave with granularity. The contents are the automatically placed into the grid to fill the available space. See the example below.</p>
-				<p>It also introduces new CSS units and functions to define the widths and heights of columns and rows in relation to the other rows.</p>
+				<p>CSS Grid enables one to define, how the grid columns and rows behave with granularity. The contents are the automatically placed into the grid to fill the available space. See <i>Figure 1.</i></p>
+				<p>It also introduces new CSS units and functions enabling us define the widths and heights of columns and rows in relation to the contents or the remaining space in the grid.</p>
 				<p>Like with Flexbox it is going to take a while for the Web community to come to grips with the full power of Grids, but once we do layout on the web will rival the beauty of print.</p>
 			</section>
 
@@ -108,8 +113,8 @@
 
 		<section>
 			<div class="columns">
-				<p>CSS Grid is great for very stylised layouts. It is very useful for controlled use of whitespace, Empty areas on your page can make it easier on the eyes.</p>
-				<p>CSS Grid layouts are Analogous to how real documents are laid out in print.</p>
+				<p>CSS Grid is great for very stylised layouts. Elements placed into the grid are kept pefectly inline with each other. You have lots of control to place elements in any column or row on the page. This property is very useful for controlled use of empty spaces. Empty areas on your page can make it much easier to read by reducing clutter and helping flow.</p>
+				<p>CSS Grid layouts are Analogous to how real print documents are laid out from the pages of tabloid magazines to avant-garde works of post modern print.</p>
 				<p>They ensure that elements in the page line up with other elements even if they are of different sizes.</p>
 				<p>Notice how in Figure 1. the 1st column, the one with the vertical header, is the same width as the header. This is because the columns for the grid are set to <code>min-content repeat(3, 1fr)</code> which is equivalent to <code>min-content 1fr 1fr 1fr</code>, so 4 columns the first is the smallest content wide, each column then recieves 1 fraction of the remaining space.</p>
 				<p>This has the nice property of keeping all the columns proportional so that if the header was wider it would adjust accordingly, use the slider below to adjust the font-size:</p>
@@ -129,12 +134,13 @@
 			<h3>CSS Grid and Components</h3>
 			<p>This seems like the ultimate use case for Grid!</p>
 			<ul>
-				<li>Components placed in the Grid will be Resized to fit the Area</li>
-				<li>Grids can be made to respond to the sizes of their contents!</li>
+				<li>Components placed in the Grid will be Resized to fit the grid areas they are assigned to.</li>
+				<li>Grids can also respond to the sizes of their contents, to fit the largest or smallest item in the row/column!</li>
 			</ul>
 			<div class="columns">
-				<p>A designer can layout the page using a Grid and when the components are added they will be resized to fit into the Grid appropriately.</p>
-				<p>The grid can be built to have some regions which will shrink or expand to fit fixed size elements.</p>
+				<p>With CSS grid you get the choice of rigid or dynamic layouts. Both useful depending on your needs.</p>
+				<p>A designer can design a page layout using a Grid and when the components are added they will be resized to fit into the Grid appropriately. Allowing nice seperation of concerns of page to component.</p>
+				<p>The grid can be built to have some regions which will shrink or expand to fit their contents. SO it is possible to have dynamic areas which expand or contract as required.</p>
 			</div>
 		</section>
 
@@ -142,7 +148,7 @@
 			<div>
 				<span class="wide" style="background-color: var(--blue);">1</span>
 				<span class="tall" style="background-color: var(--blue);">2</span>
-				<span class="wide tall" 	style="background-color: var(--magenta);">3</span>
+				<span class="wide tall" style="background-color: var(--magenta);">3</span>
 				<span class="tall" style="background-color: var(--blue);">4</span>
 				<span class="wide" style="background-color: var(--magenta);">5</span>
 				<span style="background-color: var(--blue);">6</span>
@@ -159,18 +165,21 @@
 		</figure>
 
 		<section>
-			<h3>CSS Grid and Responsive Design</h3>
+			<h3>CSS Grid and Responsive Web Design</h3>
 			<div class="columns">
-				<p>CSS Grid works really well with RWD. A simple grid can have different columns and rows depending on media queries. It's children will then be moved to fit into the Grid however they can. If the grid is set to <code class="css">grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
+				<p>CSS Grid works really well with RWD. A simple grid can have different numbers of columns and rows depending on media queries. It's children will then be moved to fit into the Grid however they can. If the grid is set to <code class="css">grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
 				<p>We can gain more control when we use named grid areas and named grid edges. We can have content which always fills the same grid-area or goes between the same two named edges but change what that means depending on the context.</p>
 				<p>Our grid could have 7 columns on large screens, 5 on medium sized screens and only 2 on mobile. Then we can rely on a combination of auto placement and named areas to layout our content precisely on all screen sizes.</p>
 			</div>
 		</section>
 
 		<section>
-			<h3>Named Grid Edges</h3>
-			<p>Here I have defined a two column grid using <code>grid-template-columns</code>, where the first edge and the last edge have been named using square brackets.</p>
-			<p>The child's 3 <code>grid-column</code> statements are all equivalent. Making it go from one edge to the other.</p>
+			<h3>Labeling Areas</h3>
+			<p>Labels are really useful for making grids easy to place items into.</p>
+			<p>You can name areas in the grid using <code>grid-template-areas</code> and you can name columns/rows in the grid. In your <code>grid-template-columns</code> and <code>grid-template-rows</code></p>
+			<p>In the code sample below I have defined a two column grid using <code>grid-template-columns</code>, where the first edge and the last edge have been named using square brackets.</p>
+			<p>The 3 <code>grid-column</code> statements for the child are all equivalent. Making it go from one edge to the other.</p>
+			<p><b>Notice</b> how we can use the area 'wide' which which was automatically generated because we have edges named 'wide-start' and 'wide-end'.</p>
 			<pre><code class="css">
 parent {
 	display: grid;
@@ -178,6 +187,10 @@ parent {
 }
 
 child {
+	grid-column: 1/3;
+
+	grid-column: 1/span 2;
+
 	grid-column: wide-start/span 2;
 
 	grid-column: wide-start/wide-end;
@@ -185,11 +198,9 @@ child {
 	grid-column: wide;
 }
 			</code></pre>
-
-			<p><b>Notice</b> how we can use the area 'wide' which which was automatically generated because we have edges named 'wide-start' and 'wide-end'.</p>
 		</section>
 		
-		<h2>CSS Custom Properties</h2>
+		<h2 id="css-custom-properties">CSS Custom Properties</h2>
 
 		<figure style="grid-column: left-start/ right-start;">
 			<pre><code class="css">
@@ -221,7 +232,7 @@ p {
 			
 			<p>On the surface CSS Custom Properties just seem akin to static sass variables but they are so much more than that!</p>
 			<blockquote cite="https://twitter.com/salvadelapuente/status/895728964714598400">
-				<p>Custom properties make your CSS to behave like a spreadsheet. You alter a value, everything is recomputed.</p>
+				<p>Custom properties make your CSS behave like a spreadsheet. You alter a value, everything is recomputed.</p>
 				<footer>
 				— <cite><a href="https://twitter.com/salvadelapuente/status/895728964714598400">@Salva</a></cite>
 				</footer>
@@ -232,7 +243,7 @@ p {
 			<p>CSS Custom Properties can have their value determined by other Custom Properties or combinations therof using <code>calc()</code></p>
 			<p>CSS Custom properties can be overrided at any point to change the value further down in the cascade. This allows components to use/ignore/modify the inherited custom properties as required.</p>
 			<p>They can be overrided by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>. Allowing more concise CSS with less duplication as by changing one or two variable you can affect many properties.</p>
-			<p>A really nice effect of having the variables calculated dynamically is that because the size of dynamic units such as <code>1rem 2em 3vw 4ex 5cm</code> it is possible to add or subtract dimensions with different units, e.g. <code>calc(10px + 1em + 3cm)</code></p>
+			<p>A really nice effect of having the variables calculated live in the browser rather than pre-compiled is that you can mix device specific units such as <code>1rem 2em 3vw 4ex 5cm</code> in your calculations in the stylesheet, e.g. <code>calc(10px + 1em + 3cm)</code></p>
 		</section>
 		
 		<figure style="grid-column: left-end/right-end;">
@@ -296,22 +307,17 @@ document.documentElement.style.setProperty('--blue', 'magenta')
 			<p>You can also run this command at any point in the tree, try using the your browser's inspector to set the style of one of the headings <code>el.setAttribute('style', "--blue: firebrick;")</code> the heading should change but leave the others are left untouched.</p>
 		</section>
 
-		<h2>Web Animation API</h2>
+		<h2 id="web-animations">Web Animation API</h2>
 		<section>
 			<p><script>
 			if (typeof Animation === 'undefined') {
 				document.write('Your browser does not natively support Web Animations, but we will use the polyfill library, so the demos will still work. <script src="https://cdn.rawgit.com/web-animations/web-animations-js/b0ca1f7f/web-animations.min.js"></scr'+'ipt>');
 			}else {
-				document.write('Your browser supports Web Animations');
+				document.write('Your browser supports Web Animations!!');
 			}
-			if (typeof Animation !== 'undefined' && Animation.prototype.finished === undefined) {
-				Object.defineProperty(Animation.prototype, 'finished', {get: function () {
-					return new Promise(function (resolve) {
-						this.addEventListener('finish', resolve);
-					}.bind(this));
-				}});
-			}
-			</script></p>
+			</script>
+			<!-- Polyfill for .finished cause I love it! -->
+			<script src="https://cdn.rawgit.com/simevidas/2e721c8e6d67f04b5e1a0083c542a767/raw/0bd4b6bc2b5c84b488adc4137e0b3eeba183023a/finished-polyfill.js"></script></p>
 			<p>Unlike CSS custom properties and CSS Grid which cannot be polyfilled performantly, there is a polyfil for the JavaScript Web Animation API. It can be downloaded from <a href="https://github.com/web-animations/web-animations-js">Web Animations on Github</a> so there is no excuse not to use it today.</p>
 			<p>Animations are far more complex than I can go into in a short summary article so I <b>strongly</b> recommend watching <a href="https://vimeo.com/channels/cssday/226736126">Rachel Nabors amazing talk on Web Animations from the recent CSS Day</a>.</p>
 		</section>
@@ -510,7 +516,7 @@ function bounce() {
 		<section>
 			<h4>Chaining Animations</h4>
 			<p>The advantage of the Web Animations API over CSS animations is that it gives callbacks for when it is finished.</p>
-			<p>You can use <code>anim.addEventListener('finish')</code> to detect when it has finished. It also has a <code>.finished</code> property, which is a promise which resolves when it is complete. The promise interface is really nice but hasn't been implemented everywhere yet. <a href="https://gist.github.com/AdaRoseEdwards/1f1c86cc8d390e5760fc029793b8db22">I wrote a short polyfill for it.</a></p>
+			<p>You can use <code>anim.addEventListener('finish')</code> to detect when it has finished. It also has a <code>.finished</code> property, which is a promise which resolves when it is complete. The promise interface is really nice but hasn't been implemented everywhere yet. <a href="https://gist.github.com/simevidas/2e721c8e6d67f04b5e1a0083c542a767">Here is a short polyfill for it so you can use it today.</a></p>
 			<p>In the example in Figure 10. once the animation has finished, it decreases the --bounceHeight css variable and plays the animation again.</p>
 			<button onclick="bounceSource.style.display = 'block'">View the source code</button>
 		</section>
@@ -526,10 +532,20 @@ function bounce() {
 			<figcaption>Source code for the bounce demo.</figcaption>
 		</figure>
 
-		<h2>Conclusion</h2>
+		<section>
+			<h2>Animating custom properties?</h2>
+			<p>Today it is not possible to animate CSS custom properties using Web Animations. The problem lies in that the browser does not know the property type of CSS variables so does not know how to tween them correctly. For example it cannot work out that <code>--my-var: red</code> is supposed to be a color and not a length.</p>
+			<p>A solution is in the works, as part of the upcoming Houdini APIs, by registering a custom property you can declare it's type to allow it to be tweened. This is not available in regular browsers yet though.</p>
+			<p>Thanks to <a href="https://twitter.com/tabatkins/status/903254775906447361">Tab Atkins</a> for the tip!</p>
+		</section>
+
+		<h2>Thanks for reading!!</h2>
 
 		<section>
-			<p>I hope this has illustrated some of the new powers of the web which enable us to start letting go of our frameworks. To use some of the powerful tools being built into the platform to make our lives as developers easier.</p>
+			<p>I hope this has illustrated some of the new powers of the web which enable us to start letting go of our frameworks.</p>
+			<p>By using these powerful tools being built into the platform, it will make our lives as developers easier and our products faster.</p>
+			<p>It's okay that some of these tools are unavailable for some browsers today, using CSS's <code>@supports</code> selector or <code>CSS.supports('display' , 'grid')</code> in JavaScript it is possible to feature detect these new APIs and if the are unavailable we can degrade to sensible fallbacks.</p>
+			<p>Eventually the fallbacks and polyfills will no longer be required and they can be deleted.</p>
 		</section>
 
 		<h2>Links</h2>
