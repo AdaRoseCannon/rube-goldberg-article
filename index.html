@@ -69,7 +69,7 @@
 			<h3>by Ada Rose Edwards - <time datetime="2017-09-01"></time>1st September 2017</h3>
 		</section>
 
-		<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
+		<img src="images/rube.svg" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;" />
 
 		<span style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center; font-size: 2.5em; color: rgba(70,50,0,0.3);	margin-left: 0; margin-right: 0; padding-right: 0; padding-left: 0; grid-column-start: 2;">Whitespace &lt;3</span>
 
@@ -91,9 +91,9 @@
 				<li><a href="#web-animations">Web Animations</a></li>
 			</ul>
 		</section>
-		
+
 		<h2 id="css-grid">CSS Grid</h2>
-		
+
 		<section>
 			<p><script>
 			if (CSS && CSS.supports) {
@@ -107,8 +107,8 @@
 			}
 			</script></p>
 			<section class="columns">
-				<p>Grid layout feels like the most significant CSS API addition since FlexBox. Like flexbox enabled powerful 1-dimensional layouts; Grid enables beautiful 2-dimensional layouts.</p>
-				<p>Grid isn't a flexbox replacement, where a layout is 1 dimensional e.g. a single row/column such as in a component flexbox maybe more useful.</p>
+				<p>Grid layout feels like the most significant CSS API addition since FlexBox. Like Flexbox enabled powerful 1-dimensional layouts; Grid enables beautiful 2-dimensional layouts.</p>
+				<p>Grid isn't a Flexbox replacement, where a layout is 1 dimensional e.g. a single row/column such as in a component flexbox maybe more useful.</p>
 				<p>A good rule of thumb is Grid for page layouts and Flexbox for components. But feel free to use whichever tool feels best for your situation.</p>
 
 				<p>CSS grid allows you to divide your page up into a template with columns and rows and label areas of your grid.</p>
@@ -132,12 +132,17 @@
 			<div id="grid-placement-demo">
 				<h2>Four Column Grid</h2>
 				<p>The title is the first element, I have set it's writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
-				<img width="256" src="images/logo1.png" style="grid-column-start: 2;"/>
+				<img width="256" src="images/logo3.png" style="grid-column-start: 2;"/>
 				<p>The previous image has <code class="css">grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. The image width is set to 100% so that it fills the column width.  This paragraph gets placed immediately after the image because there are still two horizontal cells avaialble for it to fill in this row.</p>
 
 				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code class="css">grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
 			</div>
 			<figcaption>CSS Grid Example with Text and Images</figcaption>
+		</figure>
+
+		<figure style="grid-column-start: left-start;">
+			<img src="images/machine-sketch1.png" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;"/>
+			<figcaption class="no-counter">By <a href="https://commons.wikimedia.org/wiki/File:Dwight-Lloyd_machine_sketch.png">Donald M. Levy</a></figcaption>
 		</figure>
 
 		<section>
@@ -158,7 +163,7 @@
 				});
 			</script>
 		</section>
-		
+
 		<section>
 			<h3>CSS Grid and Components</h3>
 			<p>This seems like the ultimate use case for Grid!</p>
@@ -228,7 +233,7 @@ child {
 }
 			</code></pre>
 		</section>
-		
+
 		<h2 id="css-custom-properties">CSS Custom Properties</h2>
 
 		<figure style="grid-column: left-start/ right-start;">
@@ -258,7 +263,7 @@ p {
 				document.write('Can\'t detect CSS Custom Properties Support');
 			}
 			</script></p>
-			
+
 			<p>On the surface CSS Custom Properties just seem akin to static sass variables but they are so much more than that!</p>
 			<blockquote cite="https://twitter.com/salvadelapuente/status/895728964714598400">
 				<p>Custom properties make your CSS behave like a spreadsheet. You alter a value, everything is recomputed.</p>
@@ -267,14 +272,14 @@ p {
 				</footer>
 			</blockquote>
 		</section>
-		
+
 		<section>
 			<p>CSS Custom Properties can have their value determined by other Custom Properties or combinations therof using <code>calc()</code></p>
 			<p>CSS Custom properties can be overrided at any point to change the value further down in the cascade. This allows components to use/ignore/modify the inherited custom properties as required.</p>
 			<p>They can be overrided by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>. Allowing more concise CSS with less duplication as by changing one or two variable you can affect many properties.</p>
 			<p>A really nice effect of having the variables calculated live in the browser rather than pre-compiled is that you can mix device specific units such as <code>1rem 2em 3vw 4ex 5cm</code> in your calculations in the stylesheet, e.g. <code>calc(10px + 1em + 3cm)</code></p>
 		</section>
-		
+
 		<figure style="grid-column: left-end/right-end;">
 			<pre><code>
 :root {
@@ -325,7 +330,7 @@ div {
 				Reading and Writing CSS custom Properties
 			</figcaption>
 		</figure>
-		
+
 		<section>
 			<p>If you update a CSS custom property, like with any CSS property, the whole document will update and all other custom properties will be updated.</p>
 			<p>Try running the following code snippet in your browsers console on this page:</p>
@@ -350,7 +355,7 @@ document.documentElement.style.setProperty('--blue', 'magenta')
 			<p>Unlike CSS custom properties and CSS Grid which cannot be polyfilled performantly, there is a polyfil for the JavaScript Web Animation API. It can be downloaded from <a href="https://github.com/web-animations/web-animations-js">Web Animations on Github</a> so there is no excuse not to use it today.</p>
 			<p>Animations are far more complex than I can go into in a short summary article so I <b>strongly</b> recommend watching <a href="https://vimeo.com/channels/cssday/226736126">Rachel Nabors amazing talk on Web Animations from the recent CSS Day</a>.</p>
 		</section>
-		
+
 		<figure style="grid-column: left-start/right-end; max-width: 100%; display: none;">
 			<pre><code class="html">
 
@@ -384,7 +389,7 @@ var animKeyframes = [{
     transform: 'translateX(5em)'
 },{
 	opacity: 1,
-	offset: 0.2	
+	offset: 0.2
 },{
     opacity: 1,
     transform: 'translateX(0) rotate(720deg) scale(2)'
@@ -588,5 +593,5 @@ function bounce() {
 		</section>
 
 		<script src="main.js"></script>
-	</main></body>	
+	</main></body>
 </html>
