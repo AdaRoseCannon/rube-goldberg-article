@@ -126,8 +126,11 @@ p > code {
 }
 
 figure {
-	counter-increment: figure;
 	max-width: 100%;
+}
+
+figure:not(.no-counter) {
+	counter-increment: figure;
 }
 
 pre {
@@ -168,7 +171,7 @@ label > input {
 	background-color: palegoldenrod;
 }
 
-figure > figcaption:not(.no-counter):before {
+figure:not(.no-counter) > figcaption:before {
 	content: 'Figure ' counter(figure) ': ';
 }
 
