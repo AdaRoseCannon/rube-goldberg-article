@@ -66,12 +66,12 @@
 		<section class="header">
 			<h1 id="title">A Rube Goldberg Machine</h1>
 			<h2 id="subtitle">An introduction to post-modern Web Development</h2>
-			<h3>by Ada Rose Edwards - <time datetime="2017-09-01"></time>1st September 2017</h3>
+			<h3>by Ada Rose Edwards - <time datetime="2017-09-01"></time>11th September 2017</h3>
 		</section>
 
-		<img src="images/rube.svg" style="width: 100%; max-width: 560px;margin: 0 auto;" />
+		<img src="images/rube.svg" style="width: 100%; max-width: 560px; margin: 1em auto; display: block;" />
 
-		<span style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center; font-size: 2.5em; color: rgba(70,50,0,0.3);	margin-left: 0; margin-right: 0; padding-right: 0; padding-left: 0; grid-column-start: 2;">Whitespace &lt;3</span>
+		<span style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center; font-size: 2.5em; color: rgba(70,50,0,0.3);	margin-left: 0; margin-right: 0; padding-right: 0; padding-left: 0; padding-top: 0.5em; padding-bottom: 0.5em; grid-column-start: 2;">Whitespace &lt;3</span>
 
 		<section>
 			<div class="columns">
@@ -91,9 +91,9 @@
 				<li><a href="#web-animations">Web Animations</a></li>
 			</ul>
 		</section>
-		
+
 		<h2 id="css-grid">CSS Grid</h2>
-		
+
 		<section>
 			<p><script>
 			if (CSS && CSS.supports) {
@@ -107,11 +107,11 @@
 			}
 			</script></p>
 			<section class="columns">
-				<p>Grid layout feels like the most significant CSS API addition since FlexBox. Like flexbox enabled powerful 1-dimensional layouts; Grid enables beautiful 2-dimensional layouts.</p>
-				<p>Grid isn't a flexbox replacement, where a layout is 1 dimensional e.g. a single row/column such as in a component flexbox maybe more useful.</p>
+				<p>Grid layout feels like the most significant CSS API addition since FlexBox. Like Flexbox enabled powerful 1-dimensional layouts; Grid enables beautiful 2-dimensional layouts.</p>
+				<p>Grid isn't a Flexbox replacement. Where a layout is 1 dimensional e.g. a single row/column, such as in a component, Flexbox maybe more useful.</p>
 				<p>A good rule of thumb is Grid for page layouts and Flexbox for components. But feel free to use whichever tool feels best for your situation.</p>
 
-				<p>CSS grid allows you to divide your page up into a template with columns and rows and label areas of your grid.</p>
+				<p>CSS Grid allows you to divide your page up into a template with columns and rows and label areas of your grid.</p>
 				<p>With CSS Grid you are not restricted to 12 fixed width columns like many popular grid libaries.</p>
 				<p>The grid of CSS Grid can have any number of rows and columns of unequal sizes. It can also automatically add rows or columns to allow it to grow horizontally or vertically as more content is added.</p>
 				<div id="grid-example">
@@ -121,9 +121,9 @@
 					<span></span>
 					<span></span>
 				</div>
-				<p>CSS Grid enables one to define, how the grid columns and rows behave with granularity. The contents are the automatically placed into the grid to fill the available space. See <i>Figure 1.</i></p>
+				<p>CSS Grid enables one to define, how the grid columns and rows behave with granularity. The contents are automatically placed into the grid to fill the available space. See <i>Figure 1.</i></p>
 				<p>It also introduces new CSS units and functions enabling us define the widths and heights of columns and rows in relation to the contents or the remaining space in the grid.</p>
-				<p>Like with Flexbox it is going to take a while for the Web community to come to grips with the full power of Grids, but once we do layout on the web will rival the beauty of print.</p>
+				<p>Like with Flexbox it is going to take a while for the Web community to come to grips with the full power of Grids, but once we do, layout on the web will rival the beauty of print.</p>
 			</section>
 
 		</section>
@@ -131,21 +131,26 @@
 		<figure class="embed">
 			<div id="grid-placement-demo">
 				<h2>Four Column Grid</h2>
-				<p>The title is the first element, I have set it's writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
-				<img width="256" src="images/logo1.png" style="grid-column-start: 2;"/>
+				<p>The title is the first element, I have set its writing mode to vertical, the browser accounts for this in working out the size of the grid columns. Each paragraph is set to span 2 columns.</p>
+				<img width="256" src="images/logo3.png" style="grid-column-start: 2;"/>
 				<p>The previous image has <code class="css">grid-column-start: 2;</code> so it starts from the first free cell after the second boundary, without reordering. The image width is set to 100% so that it fills the column width.  This paragraph gets placed immediately after the image because there are still two horizontal cells avaialble for it to fill in this row.</p>
 
-				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code class="css">grid-column: 1/-1;</code> aka, This goes from the first grid boundary (1) to the last (4 or -1)</p>
+				<p style="grid-column: 1/-1;">This paragraph is set to span the full width of the grid, this is done by setting <code class="css">grid-column: 1/-1;</code>, a.k.a. this goes from the first grid boundary (1) to the last (4 or -1)</p>
 			</div>
 			<figcaption>CSS Grid Example with Text and Images</figcaption>
 		</figure>
 
+		<figure class="no-counter" style="grid-column-start: left-start;">
+			<img src="images/rube-goldberg-sketch1.jpg" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;"/>
+			<figcaption class="no-counter">Rube Goldberg Machine, <a href="https://commons.wikimedia.org/wiki/File:Rube_Goldberg_Cartoon_-_18_Nov_1921_Duluth_Herald.jpg">The Duluth Herald</a></figcaption>
+		</figure>
+
 		<section>
 			<div class="columns">
-				<p>CSS Grid is great for very stylised layouts. Elements placed into the grid are kept pefectly inline with each other. You have lots of control to place elements in any column or row on the page. This property is very useful for controlled use of empty spaces. Empty areas on your page can make it much easier to read by reducing clutter and helping flow.</p>
-				<p>CSS Grid layouts are Analogous to how real print documents are laid out from the pages of tabloid magazines to avant-garde works of post modern print.</p>
+				<p>CSS Grid is great for very stylised layouts. Elements placed into the grid are kept perfectly inline with each other. You have lots of control to place elements in any column or row on the page. This property is very useful for controlled use of empty spaces. Empty areas on your page can make it much easier to read by reducing clutter and helping flow.</p>
+				<p>CSS Grid layouts are Analogous to how real print documents are laid out from the pages of tabloid magazines to avant-garde works of post-modern print.</p>
 				<p>They ensure that elements in the page line up with other elements even if they are of different sizes.</p>
-				<p>Notice how in Figure 1. the 1st column, the one with the vertical header, is the same width as the header. This is because the columns for the grid are set to <code>min-content repeat(3, 1fr)</code> which is equivalent to <code>min-content 1fr 1fr 1fr</code>, so 4 columns the first is the smallest content wide, each column then recieves 1 fraction of the remaining space.</p>
+				<p>Notice how in Figure 1. the 1st column, the one with the vertical header, is the same width as the header. This is because the columns for the grid are set to <code>min-content repeat(3, 1fr)</code> which is equivalent to <code>min-content 1fr 1fr 1fr</code>, so 4 columns; the first is the smallest content wide, each column then recieves 1 fraction of the remaining space.</p>
 				<p>This has the nice property of keeping all the columns proportional so that if the header was wider it would adjust accordingly, use the slider below to adjust the font-size:</p>
 			</div>
 			<label>
@@ -158,17 +163,17 @@
 				});
 			</script>
 		</section>
-		
+
 		<section>
 			<h3>CSS Grid and Components</h3>
 			<p>This seems like the ultimate use case for Grid!</p>
 			<ul>
-				<li>Components placed in the Grid will be Resized to fit the grid areas they are assigned to.</li>
+				<li>Components placed in the grid will be resized to fit the grid areas they are assigned to.</li>
 				<li>Grids can also respond to the sizes of their contents, to fit the largest or smallest item in the row/column!</li>
 			</ul>
 			<div class="columns">
-				<p>With CSS grid you get the choice of rigid or dynamic layouts. Both useful depending on your needs.</p>
-				<p>A designer can design a page layout using a Grid and when the components are added they will be resized to fit into the Grid appropriately. Allowing nice seperation of concerns of page to component.</p>
+				<p>With CSS Grid you get the choice of rigid or dynamic layouts. Both are useful depending on your needs.</p>
+				<p>A designer can design a page layout using a Grid and when the components are added they will be resized to fit into the grid appropriately. Allowing nice seperation of concerns of page to component.</p>
 				<p>The grid can be built to have some regions which will shrink or expand to fit their contents. SO it is possible to have dynamic areas which expand or contract as required.</p>
 			</div>
 		</section>
@@ -196,7 +201,7 @@
 		<section>
 			<h3>CSS Grid and Responsive Web Design</h3>
 			<div class="columns">
-				<p>CSS Grid works really well with RWD. A simple grid can have different numbers of columns and rows depending on media queries. It's children will then be moved to fit into the Grid however they can. If the grid is set to <code class="css">grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
+				<p>CSS Grid works really well with RWD. A simple grid can have different numbers of columns and rows depending on media queries. It's children will then be moved to fit into the grid however they can. If the grid is set to <code class="css">grid-auto-flow: dense;</code> then items will be moved out of order to fit them in as densely as possible. This is good for when order is not important such as a photo gallery but may cause accessibility issues because it has been visually reordered but still the same order in the DOM.</p>
 				<p>We can gain more control when we use named grid areas and named grid edges. We can have content which always fills the same grid-area or goes between the same two named edges but change what that means depending on the context.</p>
 				<p>Our grid could have 7 columns on large screens, 5 on medium sized screens and only 2 on mobile. Then we can rely on a combination of auto placement and named areas to layout our content precisely on all screen sizes.</p>
 			</div>
@@ -228,7 +233,12 @@ child {
 }
 			</code></pre>
 		</section>
-		
+
+		<figure class="no-counter">
+			<img src="images/rube-goldberg-sketch2.jpg" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;"/>
+			<figcaption class="no-counter">Rube Goldberg Machine, <a href="https://www.flickr.com/photos/x-ray_delta_one/18482076814">James Vaughan</a></figcaption>
+		</figure>
+
 		<h2 id="css-custom-properties">CSS Custom Properties</h2>
 
 		<figure style="grid-column: left-start/ right-start;">
@@ -258,8 +268,8 @@ p {
 				document.write('Can\'t detect CSS Custom Properties Support');
 			}
 			</script></p>
-			
-			<p>On the surface CSS Custom Properties just seem akin to static sass variables but they are so much more than that!</p>
+
+			<p>On the surface CSS Custom Properties just seem akin to static Sass variables but they are so much more than that!</p>
 			<blockquote cite="https://twitter.com/salvadelapuente/status/895728964714598400">
 				<p>Custom properties make your CSS behave like a spreadsheet. You alter a value, everything is recomputed.</p>
 				<footer>
@@ -267,14 +277,14 @@ p {
 				</footer>
 			</blockquote>
 		</section>
-		
+
 		<section>
-			<p>CSS Custom Properties can have their value determined by other Custom Properties or combinations therof using <code>calc()</code></p>
-			<p>CSS Custom properties can be overrided at any point to change the value further down in the cascade. This allows components to use/ignore/modify the inherited custom properties as required.</p>
-			<p>They can be overrided by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>. Allowing more concise CSS with less duplication as by changing one or two variable you can affect many properties.</p>
-			<p>A really nice effect of having the variables calculated live in the browser rather than pre-compiled is that you can mix device specific units such as <code>1rem 2em 3vw 4ex 5cm</code> in your calculations in the stylesheet, e.g. <code>calc(10px + 1em + 3cm)</code></p>
+			<p>CSS Custom Properties can have their value determined by other Custom Properties or combinations thereof using <code>calc()</code>.</p>
+			<p>CSS Custom properties can be overriden at any point to change the value further down in the cascade. This allows components to use/ignore/modify the inherited custom properties as required.</p>
+			<p>They can be overriden by pseudo selectors such as <code>:hover</code>, or queries such as <code>@supports</code> or <code>@media</code>. Allowing more concise CSS with less duplication as by changing one or two variables you can affect many properties.</p>
+			<p>A really nice effect of having the variables calculated live in the browser rather than pre-compiled is that you can mix device-specific units such as <code>1rem 2em 3vw 4ex 5cm</code> in your calculations in the stylesheet, e.g. <code>calc(10px + 1em + 3cm)</code></p>
 		</section>
-		
+
 		<figure style="grid-column: left-end/right-end;">
 			<pre><code>
 :root {
@@ -325,18 +335,24 @@ div {
 				Reading and Writing CSS custom Properties
 			</figcaption>
 		</figure>
-		
+
 		<section>
 			<p>If you update a CSS custom property, like with any CSS property, the whole document will update and all other custom properties will be updated.</p>
-			<p>Try running the following code snippet in your browsers console on this page:</p>
+			<p>Try running the following code snippet in your browser's console on this page:</p>
 			<pre><code class="js">
 document.documentElement.style.setProperty('--blue', 'magenta')
 			</code></pre>
 			<p>This element, document.documentElement, corresponds to the ':root' element in CSS.</p>
-			<p>You can also run this command at any point in the tree, try using the your browser's inspector to set the style of one of the headings <code>el.setAttribute('style', "--blue: firebrick;")</code> the heading should change but leave the others are left untouched.</p>
+			<p>You can also run this command at any point in the tree. Try using your browser's inspector to set the style of one of the headings <code>el.setAttribute('style', "--blue: firebrick;")</code> the heading should change but leave the others untouched.</p>
 		</section>
 
 		<h2 id="web-animations">Web Animation API</h2>
+
+		<figure class="no-counter" style="grid-column-start: left-start;">
+			<img src="images/rube-goldberg-sketch3.jpg" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;"/>
+			<figcaption class="no-counter">Rube Goldberg pulley system, <a href="https://commons.wikimedia.org/wiki/File:Rube_Goldberg_Pulley_System.JPG">MikeBertrand6</a></figcaption>
+		</figure>
+
 		<section>
 			<p><script>
 			if (typeof Animation === 'undefined') {
@@ -347,10 +363,10 @@ document.documentElement.style.setProperty('--blue', 'magenta')
 			</script>
 			<!-- Polyfill for .finished cause I love it! -->
 			<script src="https://cdn.rawgit.com/simevidas/2e721c8e6d67f04b5e1a0083c542a767/raw/0bd4b6bc2b5c84b488adc4137e0b3eeba183023a/finished-polyfill.js"></script></p>
-			<p>Unlike CSS custom properties and CSS Grid which cannot be polyfilled performantly, there is a polyfil for the JavaScript Web Animation API. It can be downloaded from <a href="https://github.com/web-animations/web-animations-js">Web Animations on Github</a> so there is no excuse not to use it today.</p>
+			<p>Unlike CSS custom properties and CSS Grid which cannot be polyfilled performantly, there is a polyfill for the JavaScript Web Animation API. It can be downloaded from <a href="https://github.com/web-animations/web-animations-js">Web Animations on Github</a> so there is no excuse not to use it today.</p>
 			<p>Animations are far more complex than I can go into in a short summary article so I <b>strongly</b> recommend watching <a href="https://vimeo.com/channels/cssday/226736126">Rachel Nabors amazing talk on Web Animations from the recent CSS Day</a>.</p>
 		</section>
-		
+
 		<figure style="grid-column: left-start/right-end; max-width: 100%; display: none;">
 			<pre><code class="html">
 
@@ -372,10 +388,10 @@ document.documentElement.style.setProperty('--blue', 'magenta')
 
 
 		<section>
-			<p><b>Until recently</b> on the web the two ways of doing animations were using CSS transitions and animations or one of the many great libraries on the Web for doing animation already such as tween.js, anime.js and Greensock.</p>
-			<p>CSS animations and transitions are good for one off animations triggered by a class change. It makes sense to have the styles written declaratively but in CSS it is limited with how much they integrate with JavaSript.</p>
+			<p><b>Until recently</b> on the Web, the two ways of doing animations were using CSS transitions and animations, or one of the many great libraries for doing animation on the Web already such as tween.js, anime.js and Greensock.</p>
+			<p>CSS animations and transitions are good for one-off animations triggered by a class change. It makes sense to have the styles written declaratively but in CSS it is limited with how much they integrate with JavaSript.</p>
 			<p>The API for Web Animations to me feels like a JavaScript version of the CSS Animations spec.</p>
-			<p>They have a really nice property which is currently hard to achieve on the web, Web Animations are all kept in time using the document's timeline. This ensures that a 200ms animation will always take 200ms regardless of framerate or skipped frames due to lagging.</p>
+			<p>They have a really nice property which is currently hard to achieve on the web: Web Animations are all kept in time using the document's timeline. This ensures that a 200ms animation will always take 200ms regardless of framerate or skipped frames due to lagging.</p>
 		</section>
 
 		<script id="animDemo">
@@ -384,7 +400,7 @@ var animKeyframes = [{
     transform: 'translateX(5em)'
 },{
 	opacity: 1,
-	offset: 0.2	
+	offset: 0.2
 },{
     opacity: 1,
     transform: 'translateX(0) rotate(720deg) scale(2)'
@@ -414,7 +430,7 @@ var animOptions = {
 			}
 		</script>
 
-		<figure style="grid-column: left-end/right-end;">
+		<figure style="grid-column: left-start/right-end; max-width: 100%;">
 			<pre><code class="js">
 				<script>document.write(animDemo.text);</script>
 
@@ -428,14 +444,14 @@ ballEl.animate(animKeyframes, animOptions);
 			<figcaption>Defining the keyFrames and playing an animation.</figcaption>
 		</figure>
 
-		<section>
+		<section style="grid-column: left-start/left-end;">
 			<p>We have defined animation keyframes in Figure 6. the <code>offset</code> property in the second keyframe tells us this keyframe is at 0.7 through the animation.</p>
 			<p>It is also possible to set easing on a per-key-frame basis too. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">The docs on mdn</a> go into good detail.</p>
-			<p>The point I want to make here is that integrates amazingly with custom css properties!</p>
+			<p>The point I want to make here is that it integrates amazingly with custom CSS properties!</p>
 		</section>
 
 		<section>
-			<p>You can use custom properties in your keyframe declaration, see figure 7.!!!</p>
+			<p>You can use custom properties in your keyframe declaration, see Figure 7.!!!</p>
 			<p>In this example, I animate the background-color through the custom property --blue to a yellow color to the custom property --magenta.</p>
 		</section>
 
@@ -461,7 +477,7 @@ ballEl.animate({
 
 		<section>
 			<p>Because the syntax for easings is the same as that for CSS, I like to keep all my easing functions in a CSS file such as <a href="easings.css" target="_blank">easings.css</a> then read them in when defining the animation.</p>
-			<p>In Figure 8. below, I use the approximation of ease in out quart from my CSS file of easings. Where I can also use in the CSS for transitions or animations.</p>
+			<p>In Figure 8. below, I use the approximation of 'ease in out quart' from my CSS file of easings. Which I can also use in the CSS for transitions or animations.</p>
 			<p>CSS custom properties are really great for reducing duplicate declarations of styles in your JS, they can all be kept in your CSS file.</p>
 		</section>
 
@@ -473,12 +489,12 @@ el.animate(myKeyframes, {
 	fill: 'forwards'
 });
 			</code></pre>
-			<figcaption>Using the easings from a css file.</figcaption>
+			<figcaption>Using the easings from a CSS file.</figcaption>
 		</figure>
 
 		<section>
 			<p>CSS variables can also help with accessibility.</p>
-			<p>To continue take it a step further you can keep a duration multiplier, --durationK, in your CSS.</p>
+			<p>To continue to take it a step further, you can keep a duration multiplier, --durationK, in your CSS.</p>
 			<p>In JavaScript and CSS animations and transitions, multiply your durations by this value.</p>
 			<p>By default set the value of --durationK 1 so it has no effect on the durations.</p>
 			<p>When it is set to 0, any animation which has it's duration multiplied by --durationK will happen instantly.</p>
@@ -545,7 +561,7 @@ function bounce() {
 		<section>
 			<h4>Chaining Animations</h4>
 			<p>The advantage of the Web Animations API over CSS animations is that it gives callbacks for when it is finished.</p>
-			<p>You can use <code>anim.addEventListener('finish')</code> to detect when it has finished. It also has a <code>.finished</code> property, which is a promise which resolves when it is complete. The promise interface is really nice but hasn't been implemented everywhere yet. <a href="https://gist.github.com/simevidas/2e721c8e6d67f04b5e1a0083c542a767">Here is a short polyfill for it so you can use it today.</a></p>
+			<p>You can use <code>anim.addEventListener('finish')</code> to detect when it has finished. It also has a <code>.finished</code> property, which is a promise which resolves when it is complete. The promise interface is really nice but hasn't been implemented everywhere yet. <a href="https://gist.github.com/simevidas/2e721c8e6d67f04b5e1a0083c542a767">Here is a short polyfill for it, so you can use it today.</a></p>
 			<p>In the example in Figure 10. once the animation has finished, it decreases the --bounceHeight css variable and plays the animation again.</p>
 			<button onclick="bounceSource.style.display = 'block'">View the source code</button>
 		</section>
@@ -564,16 +580,21 @@ function bounce() {
 		<section>
 			<h2>Animating custom properties?</h2>
 			<p>Today it is not possible to animate CSS custom properties using Web Animations. The problem lies in that the browser does not know the property type of CSS variables so does not know how to tween them correctly. For example it cannot work out that <code>--my-var: red</code> is supposed to be a color and not a length.</p>
-			<p>A solution is in the works, as part of the upcoming Houdini APIs, by registering a custom property you can declare it's type to allow it to be tweened. This is not available in regular browsers yet though.</p>
+			<p>A solution is in the works, as part of the upcoming Houdini APIs. By registering a custom property, you can declare its type to allow it to be tweened. This is not available in regular browsers yet though.</p>
 			<p>Thanks to <a href="https://twitter.com/tabatkins/status/903254775906447361">Tab Atkins</a> for the tip!</p>
 		</section>
 
 		<h2>Thanks for reading!!</h2>
 
+		<figure class="no-counter" style="grid-column-start: left-start;">
+			<img src="images/rube-goldberg-sketch4.jpg" style="width: 100%; max-width: 560px; margin: 0 auto; display: block;"/>
+			<figcaption class="no-counter">Rube Goldberg co-drawing machine, <a href="https://www.flickr.com/photos/arnehendriks/4110141347">Arne Hendriks</a></figcaption>
+		</figure>
+
 		<section>
 			<p>I hope this has illustrated some of the new powers of the web which enable us to start letting go of our frameworks.</p>
 			<p>By using these powerful tools being built into the platform, it will make our lives as developers easier and our products faster.</p>
-			<p>It's okay that some of these tools are unavailable for some browsers today, using CSS's <code>@supports</code> selector or <code>CSS.supports('display' , 'grid')</code> in JavaScript it is possible to feature detect these new APIs and if the are unavailable we can degrade to sensible fallbacks.</p>
+			<p>It's okay that some of these tools are unavailable for some browsers today, using CSS's <code>@supports</code> selector or <code>CSS.supports('display' , 'grid')</code> in JavaScript it is possible to feature detect these new APIs and if they are unavailable we can degrade to sensible fallbacks.</p>
 			<p>Eventually the fallbacks and polyfills will no longer be required and they can be deleted.</p>
 		</section>
 
@@ -581,12 +602,12 @@ function bounce() {
 
 		<section>
 			<ul>
-				<li>https://rachelandrew.co.uk/archives/2016/04/12/flexible-sized-grids-with-auto-fill-and-minmax/</li>
-				<li>https://codepen.io/cssgrid/pen/kkoZro?js-preprocessor=babel/</li>
-				<li>https://css-tricks.com/snippets/css/complete-guide-grid/</li>
+				<li><a href="https://rachelandrew.co.uk/archives/2016/04/12/flexible-sized-grids-with-auto-fill-and-minmax/">https://rachelandrew.co.uk/archives/2016/04/12/flexible-sized-grids-with-auto-fill-and-minmax/</a></li>
+				<li><a href="https://codepen.io/cssgrid/pen/kkoZro?js-preprocessor=babel/">https://codepen.io/cssgrid/pen/kkoZro?js-preprocessor=babel/</a></li>
+				<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></li>
 			</ul>
 		</section>
 
 		<script src="main.js"></script>
-	</main></body>	
+	</main></body>
 </html>

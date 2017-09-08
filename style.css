@@ -81,14 +81,9 @@ p > code {
 		grid-column: right;
 	}
 
-	#grid-container > section:nth-of-type(even) + h2:nth-of-type(odd),
-	#grid-container > section:nth-of-type(even) + :not(section) + h2:nth-of-type(odd) {
+	#grid-container > section + h2,
+	#grid-container > section + :not(section) + h2 {
 		grid-column: left-start/-1;
-	}
-	
-	#grid-container > section:nth-of-type(odd) + h2:nth-of-type(odd),
-	#grid-container > section:nth-of-type(odd) + :not(section) + h2:nth-of-type(odd) {
-		grid-column: right-start/-1;
 	}
 
 	#grid-container > section:nth-of-type(even) + h2:nth-of-type(even),
@@ -96,7 +91,7 @@ p > code {
 		grid-column: 1/left-end;
 		text-align: right;
 	}
-	
+
 	#grid-container > section:nth-of-type(odd) + h2:nth-of-type(even),
 	#grid-container > section:nth-of-type(odd) + :not(section) + h2:nth-of-type(even) {
 		grid-column: 1/right-end;
@@ -126,8 +121,11 @@ p > code {
 }
 
 figure {
-	counter-increment: figure;
 	max-width: 100%;
+}
+
+figure:not(.no-counter) {
+	counter-increment: figure;
 }
 
 pre {
@@ -165,10 +163,10 @@ figure > figcaption, label {
 }
 
 label > input {
-	background-color: palegoldenrod;	
+	background-color: palegoldenrod;
 }
 
-figure > figcaption:before {
+figure:not(.no-counter) > figcaption:before {
 	content: 'Figure ' counter(figure) ': ';
 }
 
@@ -190,8 +188,8 @@ figure > figcaption:before {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 0.25em;
 	padding: 0.5em;
-    break-inside: avoid-column;  
-	page-break-inside: avoid; /*-- FF --*/ 
+    break-inside: avoid-column;
+	page-break-inside: avoid; /*-- FF --*/
 }
 
 #grid-example > * {
