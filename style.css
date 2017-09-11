@@ -270,3 +270,12 @@ figure:not(.no-counter) > figcaption:before {
 #auto-flow-dense-demo > div > span.wide {
 	grid-column: auto/span 2;
 }
+
+/* To prevent long links pushing page out to the right on mobile */
+.links ul li a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
